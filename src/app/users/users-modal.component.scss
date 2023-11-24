@@ -1,0 +1,74 @@
+.datatable {
+  ::ng-deep .ngx-datatable {
+    datatable-body {
+      height: 300px !important;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      background-color: #87a4da !important;
+    }
+
+    .datatable-header {
+      background-color: #87a4da !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: none !important;
+      padding: 20px 0;
+
+      .datatable-header-cell {
+        text-align: center;
+        font-size: 16px !important;
+        font-weight: 300;
+        font-family: Roboto-Medium, sans-serif;
+        background-color: #87a4da !important;
+        color: #FFF;
+      }
+    }
+
+    .datatable-body-cell {
+      font-weight: 400 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .action-count-value {
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        .circle {
+          width: 12px !important;
+          height: 12px !important;
+          margin: 0 5px !important;
+          border-radius: 50%;
+        }
+      }
+
+      .icon-ellipsis {
+        display: flex;
+        align-items: center;
+      }
+
+      &.datatable-body-cell:first-child {
+        justify-content: left !important;
+        padding-left: 10px;
+      }
+
+      &.ad-group-name {
+        justify-content: left !important;
+
+        .action-count-value {
+          text-align: left !important;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .datatable-row-wrapper:nth-child(2n) {
+  background-color: #f6f6f6;
+}
+
+::ng-deep .datatable-row-wrapper:nth-child(2n+1) {
+  background-color: #FFF;
+}

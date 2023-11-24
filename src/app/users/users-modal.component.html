@@ -1,0 +1,31 @@
+<div class="page-content">
+  <ngx-datatable [columnMode]="ColumnMode.flex"
+                 [rowHeight]="35"
+                 [rows]="users$ | async"
+                 class="coffer-header"
+                 rowHeight="auto">
+    <ngx-datatable-column *ngFor="let column of fsUserColumns"
+                          [flexGrow]="1"
+                          [minWidth]="15"
+                          [name]="column.title"
+                          [sortable]="true">
+      <ng-template let-row="row"
+                   ngx-datatable-cell-template>
+        {{row[column.prop]}}
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column [flexGrow]="1"
+                          [minWidth]="50"
+                          [sortable]="false">
+      <ng-template let-row="row"
+                   ngx-datatable-cell-template>
+        <div *ngIf="row?.isActionListVisible"
+             class="icon-ellipsis">
+          <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>
+

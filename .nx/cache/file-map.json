@@ -1,0 +1,251 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.2",
+  "deps": {
+    "@angular-eslint/schematics": "^17.1.0",
+    "@angular/animations": "17.0.4",
+    "@angular/common": "17.0.4",
+    "@angular/compiler": "17.0.4",
+    "@angular/core": "17.0.4",
+    "@angular/forms": "17.0.4",
+    "@angular/platform-browser": "17.0.4",
+    "@angular/platform-browser-dynamic": "17.0.4",
+    "@angular/router": "17.0.4",
+    "@fortawesome/angular-fontawesome": "^0.14.0",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@ngrx/effects": "^17.0.0",
+    "@ngrx/store": "^17.0.0",
+    "@swimlane/ngx-datatable": "^20.1.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "ngx-datatable": "^1.0.3",
+    "rxjs": "7.8.1",
+    "tslib": "2.6.2",
+    "zone.js": "0.14.2",
+    "@angular-devkit/build-angular": "17.0.3",
+    "@angular-eslint/eslint-plugin": "^17.1.0",
+    "@angular-eslint/eslint-plugin-template": "^17.1.0",
+    "@angular/cli": "17.0.3",
+    "@angular/compiler-cli": "17.0.4",
+    "@types/jasmine": "~4.3.0",
+    "@types/lodash": "^4.14.202",
+    "eslint": "^8.54.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.2.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "7922274357113896703"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "README.md",
+        "hash": "10062849247973692605"
+      },
+      {
+        "file": "angular.json",
+        "hash": "14770884631809940194"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "1016252568433988627"
+      },
+      {
+        "file": "package.json",
+        "hash": "8612180260494812965"
+      },
+      {
+        "file": "src/.eslintrc.js",
+        "hash": "3871045439428523961"
+      },
+      {
+        "file": "src/app/app-routing.module.ts",
+        "hash": "6250625392482207240"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "14038771611541891150"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "13381115004178825659"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "14023869006221402113"
+      },
+      {
+        "file": "src/app/app.module.ts",
+        "hash": "14754430781887610859"
+      },
+      {
+        "file": "src/app/client.base.ts",
+        "hash": "2241796555527294692"
+      },
+      {
+        "file": "src/app/shared/enums/http-status.enum.ts",
+        "hash": "473018255484848865"
+      },
+      {
+        "file": "src/app/top-nav-bar/enum/page.enum.ts",
+        "hash": "3116319662456115816"
+      },
+      {
+        "file": "src/app/top-nav-bar/interface/page-interface.ts",
+        "hash": "16810746279618469110"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.component.html",
+        "hash": "5433544742398938877"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.component.scss",
+        "hash": "3597651284085193711"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.component.ts",
+        "hash": "18371137187884839482"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.module.ts",
+        "hash": "3847859536742996637"
+      },
+      {
+        "file": "src/app/users/+state/users.actions.ts",
+        "hash": "15544388960397079832"
+      },
+      {
+        "file": "src/app/users/+state/users.effects.ts",
+        "hash": "14466097326406725754"
+      },
+      {
+        "file": "src/app/users/+state/users.reducers.ts",
+        "hash": "823965175945548745"
+      },
+      {
+        "file": "src/app/users/+state/users.selectors.ts",
+        "hash": "2872364510002890143"
+      },
+      {
+        "file": "src/app/users/bo/user.bo.ts",
+        "hash": "8672047797134415453"
+      },
+      {
+        "file": "src/app/users/client/enums/user-role.enum.ts",
+        "hash": "11265917502126922617"
+      },
+      {
+        "file": "src/app/users/client/model/user.model.ts",
+        "hash": "2022571137566954323"
+      },
+      {
+        "file": "src/app/users/client/users.client.ts",
+        "hash": "15117988073802658496"
+      },
+      {
+        "file": "src/app/users/service/users.service.ts",
+        "hash": "14297083181516269362"
+      },
+      {
+        "file": "src/app/users/users-modal.component.html",
+        "hash": "16093735883347911958"
+      },
+      {
+        "file": "src/app/users/users-modal.component.scss",
+        "hash": "16358330719043239066"
+      },
+      {
+        "file": "src/app/users/users-modal.component.ts",
+        "hash": "13376766545923932075"
+      },
+      {
+        "file": "src/app/users/users.module.ts",
+        "hash": "10791990850470174554"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/images/lu-library-logo.png",
+        "hash": "1089037655940756918"
+      },
+      {
+        "file": "src/assets/images/lu-lore-logo.png",
+        "hash": "17431948202101800536"
+      },
+      {
+        "file": "src/assets/images/lulore-logo.png",
+        "hash": "10207248238864850938"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3464744996580215640"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "10415101080790754086"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "12246588107753938993"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "10269436964972930671"
+      },
+      {
+        "file": "src/utils.ts",
+        "hash": "392662300889389095"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "17337579397915052279"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "1047940026627514556"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
+      }
+    ]
+  }
+}

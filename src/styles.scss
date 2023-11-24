@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+//@use '@angular/material' as mat;
+//@use 'ngx-toastr/toastr' as toastr;
+//@import 'typeface-roboto/index.css';
+
+body {
+  font-family: Roboto-Light, Roboto-Regular, Roboto, Helvetica, Arial, sans-serif !important;
+}
+.icon-ellipsis {
+  width: 10px;
+  text-align: center;
+  color: #6CB4D5;
+  font-size: 22px;
+  cursor: pointer;
+}
