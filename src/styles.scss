@@ -1,7 +1,6 @@
-//@use '@angular/material' as mat;
-//@use 'ngx-toastr/toastr' as toastr;
-//@import 'typeface-roboto/index.css';
-
+@use '@angular/material' as mat;
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "@angular/cdk/overlay-prebuilt.css";
 body {
   margin: 0;
   font-family: Roboto-Light, Roboto-Regular, Roboto, Helvetica, Arial, sans-serif !important;
@@ -13,3 +12,6 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
+
+
+@import "assets/styles/action-buttons.scss";

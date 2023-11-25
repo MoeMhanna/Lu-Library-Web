@@ -6,16 +6,16 @@ import { UserBo } from './bo/user.bo';
 import { HttpStatusEnum } from '../shared/enums/http-status.enum';
 import { USERS_KEY } from './+state/users.reducers';
 import { Subscription } from 'rxjs';
-import { usersAction } from './+state/users.actions';
+import { UsersAction } from './+state/users.actions';
 import { PopoverBoxInterface } from '../popover-box/interface/popover-box.interface';
 import { PopoverBoxService } from '../popover-box/service/popover-box.service';
 import { ActionButtonInterface } from '../shared/components/action-button/interface/action-button.interface';
 import { MatDialog } from '@angular/material/dialog';
+import { UserCreationModal } from './user-creation-modal/user-creation.modal';
 
 @Component({
-  selector: 'users-modal',
   templateUrl: './users-page.html',
-  styleUrl: './users-page.scss'
+  styleUrl: './login-page.scss'
 })
 export class UsersPage implements OnInit, OnDestroy {
   public usersList: Array<UserBo> = [];
@@ -70,7 +70,7 @@ export class UsersPage implements OnInit, OnDestroy {
         visible: true,
         label: 'delete',
         handler: async (fsUserItemBo: UserBo) => {
-          this.store.dispatch(usersAction.deleteUser({id: fsUserItemBo.id}));
+          this.store.dispatch(UsersAction.deleteUser({id: fsUserItemBo.id}));
         }
       },
     ];
@@ -78,7 +78,7 @@ export class UsersPage implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.userStateSubscription();
-    this.store.dispatch(usersAction.loadUsers());
+    this.store.dispatch(UsersAction.loadUsers());
   }
 
   public userStateSubscription() {
@@ -99,6 +99,6 @@ export class UsersPage implements OnInit, OnDestroy {
   }
 
   private userCreationModal() {
-
+    this.matDialog.open(UserCreationModal)
   }
 }

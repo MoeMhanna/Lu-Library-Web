@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PageEnum } from './enum/page.enum';
 import { PageInterface } from './interface/page-interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-nav-bar',
@@ -15,8 +16,9 @@ export class TopNavBarComponent {
       title: 'LuLore users',
       visible: true,
       isPageActive: false,
-      role: PageEnum.modal,
+      role: PageEnum.page,
       handler: async () => {
+        this.router.navigate(['/users']);
       }
     },
     {
@@ -30,11 +32,10 @@ export class TopNavBarComponent {
       }
     }
   ];
-
   public configureAppPages: Array<PageInterface> = [
     {
       faIcon: ['fas', 'book'],
-      title: "Books",
+      title: 'Books',
       visible: true,
       isPageActive: false,
       role: PageEnum.modal,
@@ -43,7 +44,7 @@ export class TopNavBarComponent {
     },
     {
       faIcon: ['fas', 'chart-bar'],
-      title: "Categories",
+      title: 'Categories',
       visible: true,
       isPageActive: false,
       role: PageEnum.modal,
@@ -51,6 +52,9 @@ export class TopNavBarComponent {
       }
     },
   ];
+
+  constructor(private router: Router) {
+  }
 
   public dismissConfigureMenu() {
     this.showConfigureMenu = false;

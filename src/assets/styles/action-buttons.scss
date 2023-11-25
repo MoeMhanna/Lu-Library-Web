@@ -1,0 +1,30 @@
+button {
+  &.action-button {
+    min-width: 90px;
+    height: 28px;
+    margin-left: 14px;
+    border: 1px solid #a1a0a0;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #88a5db;
+    cursor: pointer;
+
+    &.is-disabled {
+      opacity: 0.5 !important;
+      color: #FFF !important;
+      border: 1px solid #c6cad3;
+      background-color: #555 !important;
+      cursor: auto !important;
+    }
+
+    &.cancel-color {
+      color: #FFF !important;
+      background-color: #bfbfbf !important;
+    }
+
+    &.red-color {
+      color: #FFF !important;
+      background-color: #ff0000 !important;
+    }
+  }
+}

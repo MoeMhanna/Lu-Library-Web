@@ -1,7 +1,7 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { UserBo } from '../bo/user.bo';
 import { HttpStatusEnum } from '../../shared/enums/http-status.enum';
-import { usersAction } from './users.actions';
+import { UsersAction } from './users.actions';
 
 export const USERS_KEY = 'Users';
 
@@ -18,20 +18,20 @@ const usersInitialState: UsersState = {
 };
 
 export const UsersReducer = createReducer<UsersState, Action>(usersInitialState,
-  on(usersAction.loadUsers, (state: UsersState) => {
+  on(UsersAction.loadUsers, (state: UsersState) => {
     return {
       ...state,
       status: HttpStatusEnum.loading
     }
   }),
-  on(usersAction.loadUsersSuccess, (state: UsersState, {userList}) => {
+  on(UsersAction.loadUsersSuccess, (state: UsersState, {userList}) => {
     return {
       ...state,
       [USERS_KEY]: userList,
       status: HttpStatusEnum.success
     }
   }),
-  on(usersAction.loadUsersError, (state: UsersState, {error}) => {
+  on(UsersAction.loadUsersError, (state: UsersState, {error}) => {
     return {
       ...state,
       error: error,
@@ -39,38 +39,38 @@ export const UsersReducer = createReducer<UsersState, Action>(usersInitialState,
     }
   }),
 
-  on(usersAction.deleteUser, (state: UsersState) => {
+  on(UsersAction.deleteUser, (state: UsersState) => {
     return {
       ...state,
       status: HttpStatusEnum.loading
     }
   }),
-  on(usersAction.deleteUserSuccess, (state: UsersState) => {
+  on(UsersAction.deleteUserSuccess, (state: UsersState) => {
     return {
       ...state,
       status: HttpStatusEnum.removeSuccess
     }
   }),
-  on(usersAction.deleteUserError, (state: UsersState) => {
+  on(UsersAction.deleteUserError, (state: UsersState) => {
     return {
       ...state,
       status: HttpStatusEnum.removeError
     }
   }),
 
-  on(usersAction.createUser, (state: UsersState) => {
+  on(UsersAction.createUser, (state: UsersState) => {
     return {
       ...state,
       status: HttpStatusEnum.loading
     }
   }),
-  on(usersAction.createUserSuccess, (state: UsersState) => {
+  on(UsersAction.createUserSuccess, (state: UsersState) => {
     return {
       ...state,
       status: HttpStatusEnum.createSuccess
     }
   }),
-  on(usersAction.createUserError, (state: UsersState) => {
+  on(UsersAction.createUserError, (state: UsersState) => {
     return {
       ...state,
       status: HttpStatusEnum.createError

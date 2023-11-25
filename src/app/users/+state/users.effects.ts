@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, of, switchMap } from 'rxjs';
-import { usersAction } from './users.actions';
+import { UsersAction } from './users.actions';
 import { UsersService } from '../service/users.service';
 import { UserModel } from '../client/model/user.model';
 
@@ -9,14 +9,14 @@ import { UserModel } from '../client/model/user.model';
 export class UsersEffects {
   public $loadDefenderUserList = createEffect(() => this.actions$
     .pipe(
-      ofType(usersAction.loadUsers),
+      ofType(UsersAction.loadUsers),
       switchMap((action) => {
         return this.usersService.getUsers()
           .pipe(
             map((userList: Array<UserModel>) => {
-              return usersAction.loadUsersSuccess({userList});
+              return UsersAction.loadUsersSuccess({userList});
             }),
-            catchError((error) => of(usersAction.loadUsersError({error})))
+            catchError((error) => of(UsersAction.loadUsersError({error})))
           )
       })
     )
@@ -24,14 +24,14 @@ export class UsersEffects {
 
   public $getUserById = createEffect(() => this.actions$
     .pipe(
-      ofType(usersAction.loadUserById),
+      ofType(UsersAction.loadUserById),
       switchMap((action) => {
         return this.usersService.getUserById(action.selectedUserId)
           .pipe(
             map((user: UserModel) => {
-              return usersAction.loadUserByIdSuccess({user});
+              return UsersAction.loadUserByIdSuccess({user});
             }),
-            catchError((error) => of(usersAction.loadUserByIdError({error})))
+            catchError((error) => of(UsersAction.loadUserByIdError({error})))
           )
       })
     )
@@ -39,13 +39,13 @@ export class UsersEffects {
 
   public $deleteUser = createEffect(() => this.actions$
     .pipe(
-      ofType(usersAction.deleteUser),
+      ofType(UsersAction.deleteUser),
       switchMap((action) => {
         return this.usersService.deleteUser(action.id)
           .pipe(
-            switchMap(() => [usersAction.loadUsers(), usersAction.deleteUserSuccess()]),
+            switchMap(() => [UsersAction.loadUsers(), UsersAction.deleteUserSuccess()]),
             catchError((error) => {
-              return of(usersAction.deleteUserError({error}));
+              return of(UsersAction.deleteUserError({error}));
             })
           )
       })
@@ -54,13 +54,13 @@ export class UsersEffects {
 
   public $createUser = createEffect(() => this.actions$
     .pipe(
-      ofType(usersAction.createUser),
+      ofType(UsersAction.createUser),
       switchMap((action) => {
         return this.usersService.createUser(action.user)
           .pipe(
-            switchMap(() => [usersAction.loadUsers, usersAction.createUserSuccess()]),
+            switchMap(() => [UsersAction.loadUsers(), UsersAction.createUserSuccess()]),
             catchError((error) => {
-              return of(usersAction.createUserError({error}));
+              return of(UsersAction.createUserError({error}));
             })
           )
       })

@@ -4,6 +4,7 @@ import { map, Observable } from 'rxjs';
 import { UserModel } from '../client/model/user.model';
 import * as _ from 'lodash';
 import { UserBo } from '../bo/user.bo';
+import { UserForCreationDto } from '../dto/user-for-creation.dto';
 
 @Injectable({providedIn: 'root'})
 export class UsersService {
@@ -30,7 +31,8 @@ export class UsersService {
       )
   }
 
-  public createUser(user: UserModel) {
+  public createUser(user: any) {
+    const userForCreationDto = new UserForCreationDto(user)
     return this.usersClient.createUser(user);
   }
 

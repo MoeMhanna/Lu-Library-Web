@@ -1,7 +1,7 @@
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
 import { UserBo } from '../bo/user.bo';
 
-export const usersAction = createActionGroup({
+export const UsersAction = createActionGroup({
   source: 'users Accounts',
   events: {
     'load users': emptyProps(),
@@ -16,7 +16,7 @@ export const usersAction = createActionGroup({
     'delete User Success': emptyProps(),
     'delete User Error': props<{ error: string }>(),
 
-    'create User': props<{ user: UserBo }>(),
+    'create User': props<{ user: any }>(),
     'create User Success': emptyProps(),
     'create User Error ': props<{ error: string }>(),
   }
