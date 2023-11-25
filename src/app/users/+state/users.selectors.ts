@@ -1,8 +1,8 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { DEFENDER_USERS_KEY, DefenderUsersState } from './users.reducers';
+import { USERS_KEY, UsersState } from './users.reducers';
 
-export const selectDefenderUsers = createFeatureSelector<DefenderUsersState>(DEFENDER_USERS_KEY);
-export const selectDefenderUsersLoaded = createSelector(selectDefenderUsers, (state: DefenderUsersState) => state);
+export const selectUsers = createFeatureSelector<UsersState>(USERS_KEY);
+export const selectUsersLoaded = createSelector(selectUsers, (state: UsersState) => state);
 
 

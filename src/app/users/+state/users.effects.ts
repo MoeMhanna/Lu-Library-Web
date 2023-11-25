@@ -1,59 +1,73 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { DefenderUsersActions } from './defender-users.actions';
-import { of, switchMap, tap } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-import { ToastrService } from 'ngx-toastr';
-import { TranslateService } from '@ngx-translate/core';
-import { ProfilePictureService } from '@defender/profile-picture';
-import { DefenderUserService } from '@defender/defender-users';
-import { TemplateItemInterface } from '@defender/limit-template';
-import { DefenderUserModel } from '@defender/clients';
+import { catchError, map, of, switchMap } from 'rxjs';
+import { usersAction } from './users.actions';
+import { UsersService } from '../service/users.service';
+import { UserModel } from '../client/model/user.model';
 
 @Injectable()
 export class UsersEffects {
-	public $loadDefenderUserList = createEffect(() => this.actions$
-		.pipe(
-			ofType(DefenderUsersActions.loadDefenderUsers),
-			switchMap((action) => {
-				return this.defenderUserService.getDefenderUsers(action.selectedDefenderUserId)
-					.pipe(
-						map((list: Array<Partial<TemplateItemInterface<DefenderUserModel>>>) =>
-							DefenderUsersActions.loadDefendersUsersSuccess({ list })),
-						catchError((error) => of(DefenderUsersActions.loadDefenderUsersError({ error })))
-					);
-			})
-		)
-	);
+  public $loadDefenderUserList = createEffect(() => this.actions$
+    .pipe(
+      ofType(usersAction.loadUsers),
+      switchMap((action) => {
+        return this.usersService.getUsers()
+          .pipe(
+            map((userList: Array<UserModel>) => {
+              return usersAction.loadUsersSuccess({userList});
+            }),
+            catchError((error) => of(usersAction.loadUsersError({error})))
+          )
+      })
+    )
+  );
 
-	public deleteDefenderUser = createEffect(() => this.actions$
-		.pipe(
-			ofType(DefenderUsersActions.deleteDefenderUser),
-			switchMap((action) => {
-				return this.defenderUserService
-					.deleteDefenderUser(action.defenderUserId)
-					.pipe(
-						tap(() => {
-							const message = this.translateService.instant("defenderUser.toast.defenderUserDeletedWithSuccess");
-							this.toastrService.success(message);
-						}),
-						switchMap(() => [
-							DefenderUsersActions.loadDefenderUsers({}),
-							DefenderUsersActions.deleteDefenderUserSuccess()]),
-						catchError((error) => {
-							const message = this.translateService.instant("defenderUser.toast.couldNotDeleteDefenderUser");
-							this.toastrService.error(message);
-							return of(DefenderUsersActions.deleteDefenderUserError({ error }));
-						})
-					);
-			})
-		)
-	);
+  public $getUserById = createEffect(() => this.actions$
+    .pipe(
+      ofType(usersAction.loadUserById),
+      switchMap((action) => {
+        return this.usersService.getUserById(action.selectedUserId)
+          .pipe(
+            map((user: UserModel) => {
+              return usersAction.loadUserByIdSuccess({user});
+            }),
+            catchError((error) => of(usersAction.loadUserByIdError({error})))
+          )
+      })
+    )
+  );
 
-	constructor(private actions$: Actions,
-				private defenderUserService: DefenderUserService,
-				private profilePictureService: ProfilePictureService,
-				private translateService: TranslateService,
-				private toastrService: ToastrService) {
-	}
+  public $deleteUser = createEffect(() => this.actions$
+    .pipe(
+      ofType(usersAction.deleteUser),
+      switchMap((action) => {
+        return this.usersService.deleteUser(action.id)
+          .pipe(
+            switchMap(() => [usersAction.loadUsers(), usersAction.deleteUserSuccess()]),
+            catchError((error) => {
+              return of(usersAction.deleteUserError({error}));
+            })
+          )
+      })
+    )
+  );
+
+  public $createUser = createEffect(() => this.actions$
+    .pipe(
+      ofType(usersAction.createUser),
+      switchMap((action) => {
+        return this.usersService.createUser(action.user)
+          .pipe(
+            switchMap(() => [usersAction.loadUsers, usersAction.createUserSuccess()]),
+            catchError((error) => {
+              return of(usersAction.createUserError({error}));
+            })
+          )
+      })
+    )
+  );
+
+  constructor(private actions$: Actions,
+              private usersService: UsersService) {
+  }
 }

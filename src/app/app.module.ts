@@ -12,6 +12,11 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { UsersModule } from './users/users.module';
 import { HttpClientModule } from '@angular/common/http';
+import { USERS_KEY, UsersReducer } from './users/+state/users.reducers';
+import { UsersEffects } from './users/+state/users.effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPopoverBoxModule } from './popover-box/mat-popover-box.module';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -21,14 +26,21 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {
+    BrowserAnimationsModule,
+    MatPopoverBoxModule,
+    OverlayModule,
+    StoreModule.forRoot({
+      [USERS_KEY]: UsersReducer
+    }, {
       runtimeChecks: {
         strictActionTypeUniqueness: true,
         strictActionImmutability: true,
         strictStateImmutability: true
       }
     }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([
+      UsersEffects
+    ]),
     TopNavBarModule,
     UsersModule
   ],

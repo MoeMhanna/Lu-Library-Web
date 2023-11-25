@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { UsersPage } from './users-page';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { ActionButtonModule } from '../shared/components/action-button/action-button.module';
+import { ActionButtonComponent } from './action-button.component';
 
 @NgModule({
-  declarations: [UsersPage],
+  declarations: [ActionButtonComponent],
   imports: [
     CommonModule,
     FaIconComponent,
     NgxDatatableModule,
-    ActionButtonModule,
   ],
-  exports: [UsersPage]
+  exports: [ActionButtonComponent]
 })
-export class UsersModule {
+export class ActionButtonModule {
 }

@@ -3,4 +3,10 @@ export enum HttpStatusEnum {
   loading = 'loading',
   success = 'success',
   error = 'error',
+
+  removeSuccess = 'removeSuccess',
+  removeError = 'removeError',
+
+  createSuccess = 'createSuccess',
+  createError = 'createError',
 }

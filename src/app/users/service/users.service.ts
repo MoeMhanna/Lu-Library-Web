@@ -31,12 +31,7 @@ export class UsersService {
   }
 
   public createUser(user: UserModel) {
-    return this.usersClient.createUser(user)
-      .pipe(
-        map((userModel: UserModel) => {
-          return new UserBo(userModel);
-        })
-      )
+    return this.usersClient.createUser(user);
   }
 
   public updateUser(user: UserModel) {
@@ -48,12 +43,7 @@ export class UsersService {
       )
   }
 
-  public deleteUser(id: string) {
+  public deleteUser(id: string): Observable<any> {
     return this.usersClient.deleteUser(id)
-      .pipe(
-        map((userModel: UserModel) => {
-          return new UserBo(userModel);
-        })
-      )
   }
 }

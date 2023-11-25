@@ -15,7 +15,7 @@ export class UsersClient extends ClientBase {
     return this.httpClient.get<UserModel>(`${this.url}/${id}`);
   }
 
-  public createUser(user: UserModel): Observable<UserModel> {
+  public createUser(user: UserModel): Observable<any> {
     return this.httpClient.post<UserModel>(this.url, user);
   }
 
@@ -23,7 +23,7 @@ export class UsersClient extends ClientBase {
     return this.httpClient.put<UserModel>(this.url, user);
   }
 
-  public deleteUser(id: string): Observable<UserModel> {
+  public deleteUser(id: string): Observable<any> {
     return this.httpClient.delete<UserModel>(`${this.url}/${id}`);
   }
 }

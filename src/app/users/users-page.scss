@@ -1,0 +1,78 @@
+.users-page-container {
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.add-user-button {
+  width: 150px;
+  margin: 50px 0 20px 0;
+}
+
+.page-content {
+  overflow-x: hidden;
+}
+
+:host::ng-deep {
+  .ngx-datatable {
+    overflow: hidden;
+
+    .datatable-body-row {
+      overflow: hidden;
+      border-bottom: 1px solid #97836b;
+    }
+
+    .datatable-body-cell {
+      overflow: hidden;
+      margin: auto;
+      padding: 4px !important;
+    }
+
+    .datatable-header {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      background-color: #87a4da;
+      height: 35px !important;
+
+      .datatable-header-cell {
+        padding: 5px !important;
+        background-color: var(--dark-coffee-color);
+        color: #FFF
+      }
+
+      .box {
+        overflow: hidden;
+        white-space: nowrap;
+        //width: 120px;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+
+  .ngx-datatable.material.single-selection .datatable-body-row.active {
+    background: none;
+  }
+
+  .ngx-datatable.fixed-row .datatable-scroll .datatable-body-row .datatable-bodiy-cell {
+    margin-top: -10px;
+    height: 35px !important;
+  }
+
+  .ngx-datatable.material.single-selection .datatable-body-row .datatable-row-group {
+    background: none;
+  }
+
+  .ngx-datatable.material:not(.cell-selection)
+  .datatable-body-row:hover
+  .datatable-row-group {
+    cursor: pointer;
+    background: none;
+  }
+
+  ngx-datatable .datatable-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 220px) !important;
+  }
+}
