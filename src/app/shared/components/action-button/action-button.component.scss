@@ -1,0 +1,25 @@
+.action-button-container {
+  border: 1px #e8e8e8 solid;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  fa-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: gray;
+  }
+}
+
+.action-button-container:hover {
+  transition-duration: 0.5s;
+  background-color: #f6f6f6;
+  fa-icon {
+  transition-duration: 0.5s;
+    color: #0086cc;
+  }
+}

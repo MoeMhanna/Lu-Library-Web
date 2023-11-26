@@ -1,0 +1,405 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.2",
+  "deps": {
+    "@angular-eslint/schematics": "^17.1.0",
+    "@angular/animations": "17.0.4",
+    "@angular/cdk": "^17.0.1",
+    "@angular/common": "17.0.4",
+    "@angular/compiler": "17.0.4",
+    "@angular/core": "17.0.4",
+    "@angular/forms": "17.0.4",
+    "@angular/material": "^17.0.1",
+    "@angular/platform-browser": "17.0.4",
+    "@angular/platform-browser-dynamic": "17.0.4",
+    "@angular/router": "17.0.4",
+    "@fortawesome/angular-fontawesome": "^0.14.0",
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@ngrx/effects": "^17.0.0",
+    "@ngrx/store": "^17.0.0",
+    "@swimlane/ngx-datatable": "^20.1.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "ngx-datatable": "^1.0.3",
+    "rxjs": "7.8.1",
+    "tslib": "2.6.2",
+    "zone.js": "0.14.2",
+    "@angular-devkit/build-angular": "17.0.3",
+    "@angular-eslint/eslint-plugin": "^17.1.0",
+    "@angular-eslint/eslint-plugin-template": "^17.1.0",
+    "@angular/cli": "17.0.3",
+    "@angular/compiler-cli": "17.0.4",
+    "@types/jasmine": "~4.3.0",
+    "@types/lodash": "^4.14.202",
+    "eslint": "^8.54.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.2.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "17912199089957383972"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "4202971503810052168"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "18330097374217701888"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "16684795610984248179"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "7353310102720796925"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "README.md",
+        "hash": "10062849247973692605"
+      },
+      {
+        "file": "angular.json",
+        "hash": "14770884631809940194"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "17264033287180853543"
+      },
+      {
+        "file": "package.json",
+        "hash": "13131694285048626977"
+      },
+      {
+        "file": "src/app/+state/me.actions.ts",
+        "hash": "13446928795969801108"
+      },
+      {
+        "file": "src/app/+state/me.effects.ts",
+        "hash": "904649644562825998"
+      },
+      {
+        "file": "src/app/+state/me.reducers.ts",
+        "hash": "695082146441633600"
+      },
+      {
+        "file": "src/app/+state/me.selectors.ts",
+        "hash": "12076991489806634803"
+      },
+      {
+        "file": "src/app/app-routing.module.ts",
+        "hash": "3661610135784190340"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "13204561343753177336"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "13381115004178825659"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "14023869006221402113"
+      },
+      {
+        "file": "src/app/app.module.ts",
+        "hash": "14365052971801673992"
+      },
+      {
+        "file": "src/app/client.base.ts",
+        "hash": "2241796555527294692"
+      },
+      {
+        "file": "src/app/login-page/client/login.client.ts",
+        "hash": "2904061228965313751"
+      },
+      {
+        "file": "src/app/login-page/client/model/login.model.ts",
+        "hash": "4300074641767006701"
+      },
+      {
+        "file": "src/app/login-page/dto/login.dto.ts",
+        "hash": "16504034861723472157"
+      },
+      {
+        "file": "src/app/login-page/dto/register.dto.ts",
+        "hash": "6707533041034330256"
+      },
+      {
+        "file": "src/app/login-page/login-page.html",
+        "hash": "17448374428812703563"
+      },
+      {
+        "file": "src/app/login-page/login-page.scss",
+        "hash": "2228490321680029359"
+      },
+      {
+        "file": "src/app/login-page/login-page.ts",
+        "hash": "8570265071765066641"
+      },
+      {
+        "file": "src/app/login-page/login-routing.module.ts",
+        "hash": "6610231417580687018"
+      },
+      {
+        "file": "src/app/login-page/login.module.ts",
+        "hash": "2705037625917938737"
+      },
+      {
+        "file": "src/app/login-page/service/login.service.ts",
+        "hash": "4209150576094661365"
+      },
+      {
+        "file": "src/app/popover-box/enum/popover-Item-data-type.enum.ts",
+        "hash": "337321489758655117"
+      },
+      {
+        "file": "src/app/popover-box/interface/popover-box.interface.ts",
+        "hash": "12572443600878689219"
+      },
+      {
+        "file": "src/app/popover-box/mat-popover-box.component.html",
+        "hash": "15492084334434337046"
+      },
+      {
+        "file": "src/app/popover-box/mat-popover-box.component.scss",
+        "hash": "13663493008134024248"
+      },
+      {
+        "file": "src/app/popover-box/mat-popover-box.component.ts",
+        "hash": "5543776316237030365"
+      },
+      {
+        "file": "src/app/popover-box/mat-popover-box.module.ts",
+        "hash": "15039123886755315203"
+      },
+      {
+        "file": "src/app/popover-box/service/popover-box.service.ts",
+        "hash": "2590644593505456551"
+      },
+      {
+        "file": "src/app/service/token.service.ts",
+        "hash": "2038526974499915825"
+      },
+      {
+        "file": "src/app/shared/components/action-button/action-button.component.html",
+        "hash": "8255057148591180249"
+      },
+      {
+        "file": "src/app/shared/components/action-button/action-button.component.scss",
+        "hash": "4278342368953132227"
+      },
+      {
+        "file": "src/app/shared/components/action-button/action-button.component.ts",
+        "hash": "1296445498010330061"
+      },
+      {
+        "file": "src/app/shared/components/action-button/action-button.module.ts",
+        "hash": "10827655005218442581"
+      },
+      {
+        "file": "src/app/shared/components/action-button/interface/action-button.interface.ts",
+        "hash": "17279356509131478274"
+      },
+      {
+        "file": "src/app/shared/enums/http-status.enum.ts",
+        "hash": "1643137929050834839"
+      },
+      {
+        "file": "src/app/top-nav-bar/enum/page.enum.ts",
+        "hash": "3116319662456115816"
+      },
+      {
+        "file": "src/app/top-nav-bar/interface/page-interface.ts",
+        "hash": "16810746279618469110"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.component.html",
+        "hash": "5433544742398938877"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.component.scss",
+        "hash": "6950124446475314116"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.component.ts",
+        "hash": "10305304851656556661"
+      },
+      {
+        "file": "src/app/top-nav-bar/top-nav-bar.module.ts",
+        "hash": "3847859536742996637"
+      },
+      {
+        "file": "src/app/users/+state/users.actions.ts",
+        "hash": "3848173953179472739"
+      },
+      {
+        "file": "src/app/users/+state/users.effects.ts",
+        "hash": "2942572101880323418"
+      },
+      {
+        "file": "src/app/users/+state/users.reducers.ts",
+        "hash": "390906979674779794"
+      },
+      {
+        "file": "src/app/users/+state/users.selectors.ts",
+        "hash": "6710616326041317608"
+      },
+      {
+        "file": "src/app/users/bo/user.bo.ts",
+        "hash": "12193644965169388758"
+      },
+      {
+        "file": "src/app/users/client/enums/user-role.enum.ts",
+        "hash": "11265917502126922617"
+      },
+      {
+        "file": "src/app/users/client/model/user.model.ts",
+        "hash": "2022571137566954323"
+      },
+      {
+        "file": "src/app/users/client/users.client.ts",
+        "hash": "878047138963101245"
+      },
+      {
+        "file": "src/app/users/dto/user-for-creation.dto.ts",
+        "hash": "5095216504583078305"
+      },
+      {
+        "file": "src/app/users/enums/user-role.enum.ts",
+        "hash": "9420969835252708847"
+      },
+      {
+        "file": "src/app/users/service/users.service.ts",
+        "hash": "16690577781168417918"
+      },
+      {
+        "file": "src/app/users/user-creation-modal/user-creation.modal.html",
+        "hash": "2586438646978411596"
+      },
+      {
+        "file": "src/app/users/user-creation-modal/user-creation.modal.scss",
+        "hash": "6420671564295705529"
+      },
+      {
+        "file": "src/app/users/user-creation-modal/user-creation.modal.ts",
+        "hash": "10996497283195800265"
+      },
+      {
+        "file": "src/app/users/user-creation-modal/user-creation.module.ts",
+        "hash": "12483465936752301362"
+      },
+      {
+        "file": "src/app/users/users-page.html",
+        "hash": "11481320104987858940"
+      },
+      {
+        "file": "src/app/users/users-page.scss",
+        "hash": "3358554385458003873"
+      },
+      {
+        "file": "src/app/users/users-page.ts",
+        "hash": "8229384163152068510"
+      },
+      {
+        "file": "src/app/users/users-routing.module.ts",
+        "hash": "5951706029993719354"
+      },
+      {
+        "file": "src/app/users/users.module.ts",
+        "hash": "9543958662471494281"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/images/lu-library-logo.png",
+        "hash": "1089037655940756918"
+      },
+      {
+        "file": "src/assets/images/lu-lore-logo.png",
+        "hash": "17431948202101800536"
+      },
+      {
+        "file": "src/assets/images/lulore-logo.png",
+        "hash": "10207248238864850938"
+      },
+      {
+        "file": "src/assets/styles/action-buttons.scss",
+        "hash": "1412600177548883312"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3464744996580215640"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "10415101080790754086"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "12246588107753938993"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "13463812316613759059"
+      },
+      {
+        "file": "src/utils.ts",
+        "hash": "392662300889389095"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "17337579397915052279"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "575756552984491940"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
+      }
+    ]
+  }
+}

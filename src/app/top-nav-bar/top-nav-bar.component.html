@@ -1,0 +1,39 @@
+<div class="top-nav-bar">
+  <div class="LuLore-logo">
+    <img class="logo"
+         src="/assets/images/lu-lore-logo.png">
+  </div>
+  <div class="nav-items-container">
+    <div class="nav-left-items-container">
+      <ng-container *ngFor="let page of appPages">
+        <div (click)="page.handler()"
+             *ngIf="page.visible"
+             class="item">
+          <fa-icon [icon]="page.faIcon"></fa-icon>
+          <div class="item-label">
+            {{page.title}}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div (click)="dismissConfigureMenu()"
+     *ngIf="showConfigureMenu"
+     class="overlay">
+  <div class="configure-menu">
+    <ng-container *ngFor="let subpage of configureAppPages">
+      <div (click)="subpage.handler()"
+           *ngIf="subpage.visible"
+           class="menu-item">
+        <div class="menu-item-line">
+          <fa-icon [icon]="subpage.faIcon"></fa-icon>
+          <div class="menu-item-label">
+            {{ subpage.title }}
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

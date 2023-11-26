@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "@angular/cdk/overlay-prebuilt.css";
+body {
+  margin: 0;
+  font-family: Roboto-Light, Roboto-Regular, Roboto, Helvetica, Arial, sans-serif !important;
+}
+.icon-ellipsis {
+  width: 10px;
+  text-align: center;
+  color: #6CB4D5;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+@import "assets/styles/action-buttons.scss";
