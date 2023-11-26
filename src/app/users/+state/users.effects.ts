@@ -3,7 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, of, switchMap } from 'rxjs';
 import { UsersAction } from './users.actions';
 import { UsersService } from '../service/users.service';
-import { UserModel } from '../client/model/user.model';
+import { UserBo } from '../bo/user.bo';
 
 @Injectable()
 export class UsersEffects {
@@ -13,7 +13,7 @@ export class UsersEffects {
       switchMap((action) => {
         return this.usersService.getUsers()
           .pipe(
-            map((userList: Array<UserModel>) => {
+            map((userList: Array<UserBo>) => {
               return UsersAction.loadUsersSuccess({userList});
             }),
             catchError((error) => of(UsersAction.loadUsersError({error})))
@@ -28,7 +28,7 @@ export class UsersEffects {
       switchMap((action) => {
         return this.usersService.getUserById(action.selectedUserId)
           .pipe(
-            map((user: UserModel) => {
+            map((user: UserBo) => {
               return UsersAction.loadUserByIdSuccess({user});
             }),
             catchError((error) => of(UsersAction.loadUserByIdError({error})))

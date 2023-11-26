@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "rules": {
+    "indent": [
+      "error",
+      "tab"
+    ],
+    "quotes": [
+      2,
+      "single"
+    ]
+  },
+  "plugins": [
+  ]
+}

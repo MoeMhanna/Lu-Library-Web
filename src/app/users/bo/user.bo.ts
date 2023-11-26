@@ -7,7 +7,6 @@ export class UserBo {
   username: string;
   email: string;
   role: UserRoleEnum;
-  password: string;
   createdOn: string;
 
   constructor(userModel: UserModel) {
@@ -15,7 +14,6 @@ export class UserBo {
     this.username = userModel.username;
     this.email = userModel.email;
     this.role = userModel.role;
-    this.password = userModel.password;
     this.createdOn = moment(userModel.createdOn).format('YYYY / MM / DD');
   }
 }
