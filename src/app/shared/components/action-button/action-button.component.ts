@@ -7,5 +7,5 @@ import { ActionButtonInterface } from './interface/action-button.interface';
   styleUrl: './action-button.component.scss'
 })
 export class ActionButtonComponent {
-@Input()  public actionButton: ActionButtonInterface = {} as ActionButtonInterface;
+@Input()  public actionButton: ActionButtonInterface;
 }
