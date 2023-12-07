@@ -17,6 +17,10 @@ import { UsersEffects } from './users/+state/users.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPopoverBoxModule } from './popover-box/mat-popover-box.module';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { STARS_KEY, StarsReducers } from './reviews/+state/stars-state/stars-reducers-state';
+import { ReviewsEffects } from './reviews/+state/reviews.effects';
+import { REVIEWS_KEY, ReviewsReducer } from './reviews/+state/reviews.reducers';
+import { StarsEffects } from './reviews/+state/stars-state/stars.effects';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { OverlayModule } from '@angular/cdk/overlay';
     MatPopoverBoxModule,
     OverlayModule,
     StoreModule.forRoot({
-      [USERS_KEY]: UsersReducer
+      [USERS_KEY]: UsersReducer,
+      [STARS_KEY]: StarsReducers,
+      [REVIEWS_KEY]: ReviewsReducer
     }, {
       runtimeChecks: {
         strictActionTypeUniqueness: true,
@@ -39,7 +45,9 @@ import { OverlayModule } from '@angular/cdk/overlay';
       }
     }),
     EffectsModule.forRoot([
-      UsersEffects
+      UsersEffects,
+      ReviewsEffects,
+      StarsEffects
     ]),
     TopNavBarModule,
     UsersModule

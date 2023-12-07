@@ -8,6 +8,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'landing',
+    loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule),
+  },
+  {
     path: 'users',
     loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
   },
