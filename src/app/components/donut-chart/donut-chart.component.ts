@@ -3,10 +3,8 @@ import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 import * as am5percent from '@amcharts/amcharts5/percent';
 import * as am5 from '@amcharts/amcharts5';
 import { UUID } from 'angular2-uuid';
-
 import * as _ from 'lodash';
-
-declare const Gradient: any;
+import Gradient from 'javascript-color-gradient';
 
 export interface DonutChartIDataInterface {
   value: number;
@@ -17,26 +15,19 @@ export interface DonutChartIDataInterface {
 @Component({
   selector: 'donut-chart',
   template: `
-    <div [style]="{
-			'width': width || '100%',
-			'height': height,
+      <div [style]="{
+			'width': '400px',
+			'height': '400px',
 			}" id="{{uuidChart}}">
-    </div>
-  `,
-  // styleUrls: ['./donut-chart.component.scss']
+      </div>
+  `
 })
 export class DonutChartComponent implements AfterViewInit, OnChanges, OnDestroy {
-  @Input() dataList: Array<DonutChartIDataInterface> = [
-    {value: 100, category: 'Research'},
-    {value: 200, category: 'Marketing'},
-    {value: 300, category: 'Sales'},
-  ];
+  @Input() dataList: Array<DonutChartIDataInterface>;
   @Input() maxGradientColor: string;
   @Input() minGradientColor: string;
-  @Input() height: string = '275px';
+  @Input() height: string;
   @Input() width: string;
-  @Input() middleTextXPercentage: number = 275;
-  @Input() middleTextYPercentage: number = 275;
   public uuidChart = UUID.UUID();
   private chart: any;
   private series: any;
@@ -47,32 +38,32 @@ export class DonutChartComponent implements AfterViewInit, OnChanges, OnDestroy 
     this.root = am5.Root.new(this.uuidChart);
     this.root.setThemes([am5themes_Animated.new(this.root)]);
 
-    // Create chart
     this.chart = this.root.container.children.push(
       am5percent.PieChart.new(this.root, {
         layout: this.root.verticalLayout,
-        innerRadius: am5.percent(70)
+        innerRadius: am5.percent(70),
       }));
 
     this.series = this.chart.series
       .push(am5percent.PieSeries.new(this.root, {
         valueField: 'value',
-        categoryField: 'category'
+        categoryField: 'category',
+        alignLabels: false
       }));
 
     this.series.labels.template.setAll({
-      text: '{valuePercentTotal.formatNumber(\'0.00\')}%',
+      textType: 'circular',
       centerX: 0,
       centerY: 0
     });
-    this.series.labels.template.setAll({
-      valign: 'middle'
-    });
-    this.series.slices.template
-      .set('tooltipText', '{category} {valuePercentTotal.formatNumber(\'0.00\')}%');
+    // this.series.labels.template.setAll({
+    //   valign: 'middle'
+    // });
+    // this.series.slices.template
+    //   .set('tooltipText', '{category} {valuePercentTotal.formatNumber(\'0.00\')}%');
 
-    this.series.labels.template.adapters.add('forceHidden', forceHidden);
-    this.series.ticks.template.adapters.add('forceHidden', forceHidden);
+    // this.series.labels.template.adapters.add('forceHidden', forceHidden);
+    // this.series.ticks.template.adapters.add('forceHidden', forceHidden);
 
     function forceHidden(hidden: string, target: any) {
       return target.dataItem.get('valuePercentTotal') === 0;
@@ -93,8 +84,8 @@ export class DonutChartComponent implements AfterViewInit, OnChanges, OnDestroy 
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['dataList'] && this.series) {
-      if (this.dataList?.length > 0) {
+    if (this.series) {
+      if (this.dataList) {
         this.hideNoContent();
         this.updateChartData();
       } else {
@@ -104,10 +95,10 @@ export class DonutChartComponent implements AfterViewInit, OnChanges, OnDestroy 
   }
 
   private updateChartData() {
-+    this.series.data.setAll(this.dataList);
-    this.series.labels.template.setAll({
-      text: '{valuePercentTotal.formatNumber(\'0.00\')}%'
-    });
+    if (this.dataList) {
+      this.setGradientColors();
+    }
+    this.series.data.setAll(this.dataList);
   }
 
   private showNoContent() {
@@ -134,11 +125,11 @@ export class DonutChartComponent implements AfterViewInit, OnChanges, OnDestroy 
     }
   }
 
-  // private setGradientColors() {
-  //   const gradientColorList: Array<string> = new Gradient()
-  //     .setColorGradient(this.minGradientColor, this.maxGradientColor)
-  //     .setMidpoint(this.dataList?.length)
-  //     .getColors();
-  //   this.series.get('colors').set('colors', gradientColorList);
-  // }
+  private setGradientColors() {
+    const gradientColorList: Array<string> = new Gradient()
+      .setColorGradient(this.minGradientColor, this.maxGradientColor)
+      .setMidpoint(this.dataList?.length)
+      .getColors();
+    this.series.get('colors').set('colors', gradientColorList);
+  }
 }

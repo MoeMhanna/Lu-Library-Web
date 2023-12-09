@@ -1,0 +1,34 @@
+<div class="book-details-container">
+  <div class="book-image">
+    <fa-icon [icon]="['fas', 'book']"></fa-icon>
+  </div>
+  <div class="book-name">
+    {{ bookDetails?.bookName }}
+  </div>
+  <div class="details">
+    <div class="writer">
+      <div class="label">
+        Written By :
+      </div>
+      <div>
+        {{ bookDetails?.writer }}
+      </div>
+    </div>
+    <div class="descriptions">
+      <div class="label">
+        Descriptions
+      </div>
+      <div class="desc">
+        {{ bookDetails?.description }}
+      </div>
+    </div>
+  </div>
+  <div class="reviews"></div>
+  <div class="download-book">
+    <button (click)="downloadBook()"
+            class="action-button">
+      <fa-icon [icon]="['fas', 'download']"></fa-icon>
+      Download Book
+    </button>
+  </div>
+</div>

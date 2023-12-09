@@ -26,7 +26,7 @@ export class LoginPage {
     try {
       const token = await lastValueFrom(this.loginService.login(this.loginForm.value));
       if (token) {
-        await this.router.navigate(['/users'])
+        await this.router.navigate(['/landing'])
       }
     } catch (e) {
       console.log(e);

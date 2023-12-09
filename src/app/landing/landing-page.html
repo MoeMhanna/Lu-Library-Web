@@ -1,3 +1,112 @@
-<histogram-chart></histogram-chart>
-<donut-chart [maxGradientColor]="'#1A0F1F'"
-             [minGradientColor]="'#C1B7D9'"></donut-chart>
+<div class="dashboard">
+  <div class="chart-container">
+    <div class="chart-title">
+      Books Per Major %
+    </div>
+    <div class="chart-content">
+      <ng-container *ngrxLet="majorsState$ | async as majorState">
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.loading">
+          <div class="chart-spinner">
+            <fa-icon [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.success">
+          <div class="chart-canvas">
+            <donut-chart [dataList]="booksNumberForDonutChart"
+                         [maxGradientColor]="'#2c1743'"
+                         [minGradientColor]="'#924ddc'">
+            </donut-chart>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <div class="chart-container">
+    <div class="chart-title">
+      Books Rating Distribution
+    </div>
+    <div class="chart-content">
+      <ng-container *ngrxLet="majorsState$ | async as majorState">
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.loading">
+          <div class="chart-spinner">
+            <fa-icon [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.success">
+          <div class="chart-canvas">
+            <donut-chart [dataList]="reviewsForDonutChart"
+                         [maxGradientColor]="'#082d26'"
+                         [minGradientColor]="'#2ffed3'">
+            </donut-chart>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <div class=" chart-container">
+    <div class="chart-title">
+      Downloads Per Major %
+    </div>
+    <div class="chart-content">
+      <ng-container *ngrxLet="majorsState$ | async as majorState">
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.loading">
+          <div class="chart-spinner">
+            <fa-icon [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.success">
+          <div class="chart-canvas">
+            <donut-chart [dataList]="downloadNumberForDonutChart"
+                         [maxGradientColor]="'#231d15'"
+                         [minGradientColor]="'#cfcab4'">
+            </donut-chart>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <div class="chart-container">
+    <div class="chart-title">
+      Books Numbers Per Major
+    </div>
+    <div class="chart-content histogram">
+      <ng-container *ngrxLet="majorsState$ | async as majorState">
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.loading">
+          <div class="chart-spinner">
+            <fa-icon [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.success">
+          <div class="chart-canvas">
+            <histogram-chart [dataList]="booksNumberPerMajorForHistogram"
+                             [height]="400"
+                             [width]="400">
+            </histogram-chart>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <div class="chart-container">
+    <div class="chart-title">
+      Books Downloads Per Major
+    </div>
+    <div class="chart-content histogram">
+      <ng-container *ngrxLet="majorsState$ | async as majorState">
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.loading">
+          <div class="chart-spinner">
+            <fa-icon [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="majorState.status === HttpStatusEnum.success">
+          <div class="chart-canvas">
+            <histogram-chart [dataList]="downloadsNumberPerMajorForHistogram"
+                             [height]="400"
+                             [width]="400">
+            </histogram-chart>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

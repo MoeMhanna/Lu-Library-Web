@@ -23,6 +23,10 @@ import { REVIEWS_KEY, ReviewsReducer } from './reviews/+state/reviews.reducers';
 import { StarsEffects } from './reviews/+state/stars-state/stars.effects';
 import { MAJORS_KEY, MajorsReducers } from './majors/+state/majors.reducers';
 import { MajorsEffects } from './majors/+state/majors.effects';
+import { BOOKS_KEY, BooksReducer } from './books/+state/books.reducers';
+import { BooksEffects } from './books/+state/books.effects';
+import { BOOK_DETAILS_KEY, BookDetailsReducer } from './books/+state/books-details/books-details.reducers';
+import { BooksDetailsEffects } from './books/+state/books-details/books-details.effects';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,9 @@ import { MajorsEffects } from './majors/+state/majors.effects';
       [USERS_KEY]: UsersReducer,
       [STARS_KEY]: StarsReducers,
       [REVIEWS_KEY]: ReviewsReducer,
-      [MAJORS_KEY]: MajorsReducers
+      [MAJORS_KEY]: MajorsReducers,
+      [BOOKS_KEY]: BooksReducer,
+      [BOOK_DETAILS_KEY]: BookDetailsReducer
     }, {
       runtimeChecks: {
         strictActionTypeUniqueness: true,
@@ -51,7 +57,9 @@ import { MajorsEffects } from './majors/+state/majors.effects';
       UsersEffects,
       ReviewsEffects,
       StarsEffects,
-      MajorsEffects
+      MajorsEffects,
+      BooksEffects,
+      BooksDetailsEffects
     ]),
     TopNavBarModule,
     UsersModule

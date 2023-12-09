@@ -2709,6 +2709,15 @@
         "hash": "sha512-eXzBl9ROzWZ+41nan5pCrn1C/Zq3o/VsrLFaGv8fdRmhRR6/wHMeuvCCwGf5VtEmWdAE9FpJzRU/4ZPiJCJUyg=="
       }
     },
+    "npm:@ngrx/component": {
+      "type": "npm",
+      "name": "npm:@ngrx/component",
+      "data": {
+        "version": "17.0.1",
+        "packageName": "@ngrx/component",
+        "hash": "sha512-B38NyH18gxTjrTJOu1fc+AMwOpAaRly6hgWx7zZZtbIwo0sd/bYTZGgMrJkw/CjmvjpAVBE14fB9qI+pSUsl4A=="
+      }
+    },
     "npm:@ngrx/effects": {
       "type": "npm",
       "name": "npm:@ngrx/effects",
@@ -3634,6 +3643,15 @@
         "version": "4.3.6",
         "packageName": "@types/jasmine",
         "hash": "sha512-3N0FpQTeiWjm+Oo1WUYWguUS7E6JLceiGTriFrG8k5PU7zRLJCzLcWURU3wjMbZGS//a2/LgjsnO3QxIlwxt9g=="
+      }
+    },
+    "npm:@types/javascript-color-gradient": {
+      "type": "npm",
+      "name": "npm:@types/javascript-color-gradient",
+      "data": {
+        "version": "2.4.2",
+        "packageName": "@types/javascript-color-gradient",
+        "hash": "sha512-Ch78g3wHZ7qfj4fShfnERiW/jV+yc0SY/702cm+l4YgTnDDRoYRvfctJqOVSz0Rppj4RN7/pQIwB3tW3NJbH3A=="
       }
     },
     "npm:@types/json-schema": {
@@ -16820,6 +16838,26 @@
     },
     {
       "source": "npm:@material/typography",
+      "target": "npm:tslib",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ngrx/component",
+      "target": "npm:@angular/common",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ngrx/component",
+      "target": "npm:@angular/core",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ngrx/component",
+      "target": "npm:rxjs",
+      "type": "static"
+    },
+    {
+      "source": "npm:@ngrx/component",
       "target": "npm:tslib",
       "type": "static"
     },

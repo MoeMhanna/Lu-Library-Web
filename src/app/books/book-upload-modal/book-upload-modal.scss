@@ -1,10 +1,32 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  div {
+    font-size: 30px;
+    color: #1f2129;
+  }
+}
+
 .form-group {
   margin-bottom: 15px;
   width: 600px;
-  padding: 20px;
+  padding: 0 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  textarea {
+    width: 300px;
+  }
 
   label {
     display: block;
+    font-size: 22px;
+    color: #404040;
     margin-bottom: 5px;
   }
 
@@ -17,7 +39,7 @@
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   .form-control-file {
@@ -25,21 +47,13 @@
   }
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 5px;
+.add-book {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-  &:hover {
-    background-color: #0056b3;
-    color: white;
+  .action-button {
+    width: 200px;
+    margin: 40px 0;
   }
 }

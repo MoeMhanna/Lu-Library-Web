@@ -1,0 +1,51 @@
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  padding: 30px;
+
+  .chart-container {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: #6CB4D5 2px solid;
+    border-radius: 5px;
+    margin-bottom: 40px;
+
+    .chart-title {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 25px;
+      z-index: 99;
+    }
+
+    .chart-content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+
+
+      .chart-spinner {
+        color: #8b8b8b;
+        height: 275px;
+
+        fa-icon {
+          font-size: 175px;
+        }
+      }
+
+      .chart-canvas {
+        display: flex;
+        justify-content: space-around;
+        width: inherit;
+
+      }
+    }
+  }
+}

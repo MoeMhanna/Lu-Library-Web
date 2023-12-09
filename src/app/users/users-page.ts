@@ -15,6 +15,7 @@ import { UserCreationModal } from './user-creation-modal/user-creation.modal';
 import { TokenService } from '../service/token.service';
 
 @Component({
+  selector: 'users-page',
   templateUrl: './users-page.html',
   styleUrl: './users-page.scss'
 })

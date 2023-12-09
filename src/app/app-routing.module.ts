@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./login-page/login.module').then(m => m.LoginModule),
   },
   {
-    path: 'book',
+    path: 'books',
     loadChildren: () => import('./books/books.module').then(m => m.BooksModule),
   },
 ];

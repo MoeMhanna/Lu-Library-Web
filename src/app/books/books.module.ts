@@ -7,6 +7,8 @@ import { ActionButtonModule } from '../shared/components/action-button/action-bu
 import { MatDialogModule } from '@angular/material/dialog';
 import { BooksRoutingModule } from './books-routing.module';
 import { BookUploadModule } from './book-upload-modal/book-upload.module';
+import { LetDirective } from '@ngrx/component';
+import { BooksDetailsModule } from './book-details/books-details.module';
 
 @NgModule({
   declarations: [BooksPage],
@@ -17,7 +19,9 @@ import { BookUploadModule } from './book-upload-modal/book-upload.module';
     ActionButtonModule,
     MatDialogModule,
     BookUploadModule,
-    BooksRoutingModule
+    BooksRoutingModule,
+    BooksDetailsModule,
+    LetDirective
   ],
   exports: [BooksPage]
 })

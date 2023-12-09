@@ -1,1 +1,32 @@
-<action-button [actionButton]="createBookAction"></action-button>
+<div class="add-book">
+  <action-button [actionButton]="createBookAction"></action-button>
+</div>
+<div class="books-table-container">
+  <div class="books-header">
+    <div class="book-name">File Name</div>
+    <div class="book-writer">Writer</div>
+    <div class="book-major">Major</div>
+  </div>
+  <ng-container *ngrxLet="booksState$ | async as bookState">
+    <ng-container *ngIf="bookState.status === 'success'">
+      <ng-container *ngFor="let book of bookState.books">
+        <div class="books-data">
+          <div class="book-name">
+            <fa-icon [icon]="['fas', 'book']"></fa-icon>
+            {{ book.bookName }}
+          </div>
+          <div class="book-writer">
+            {{ book.writer }}
+          </div>
+          <div class="book-major">
+            {{ book.category }}
+          </div>
+          <div (click)="presentBookDetails(book.id)"
+          class="icon-ellipsis">
+            <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</div>
