@@ -6,6 +6,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ActionButtonModule } from '../shared/components/action-button/action-button.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LandingRoutingModule } from './landing-routing.module';
+import { HistogramModule } from '../components/histogram-chart/histogram.module';
+import { DonutChartModule } from '../components/donut-chart/donut-chart.module';
 
 @NgModule({
   declarations: [LandingPage],
@@ -15,7 +17,9 @@ import { LandingRoutingModule } from './landing-routing.module';
     NgxDatatableModule,
     ActionButtonModule,
     MatDialogModule,
-    LandingRoutingModule
+    LandingRoutingModule,
+    HistogramModule,
+    DonutChartModule
   ],
   exports: [LandingPage]
 })

@@ -21,6 +21,8 @@ import { STARS_KEY, StarsReducers } from './reviews/+state/stars-state/stars-red
 import { ReviewsEffects } from './reviews/+state/reviews.effects';
 import { REVIEWS_KEY, ReviewsReducer } from './reviews/+state/reviews.reducers';
 import { StarsEffects } from './reviews/+state/stars-state/stars.effects';
+import { MAJORS_KEY, MajorsReducers } from './majors/+state/majors.reducers';
+import { MajorsEffects } from './majors/+state/majors.effects';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { StarsEffects } from './reviews/+state/stars-state/stars.effects';
     StoreModule.forRoot({
       [USERS_KEY]: UsersReducer,
       [STARS_KEY]: StarsReducers,
-      [REVIEWS_KEY]: ReviewsReducer
+      [REVIEWS_KEY]: ReviewsReducer,
+      [MAJORS_KEY]: MajorsReducers
     }, {
       runtimeChecks: {
         strictActionTypeUniqueness: true,
@@ -47,7 +50,8 @@ import { StarsEffects } from './reviews/+state/stars-state/stars.effects';
     EffectsModule.forRoot([
       UsersEffects,
       ReviewsEffects,
-      StarsEffects
+      StarsEffects,
+      MajorsEffects
     ]),
     TopNavBarModule,
     UsersModule

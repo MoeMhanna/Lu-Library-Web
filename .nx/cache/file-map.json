@@ -2,6 +2,7 @@
   "version": "6.0",
   "nxVersion": "17.1.2",
   "deps": {
+    "@amcharts/amcharts5": "^5.6.2",
     "@angular-eslint/schematics": "^17.1.0",
     "@angular/animations": "17.0.4",
     "@angular/cdk": "^17.0.1",
@@ -21,6 +22,8 @@
     "@ngrx/effects": "^17.0.0",
     "@ngrx/store": "^17.0.0",
     "@swimlane/ngx-datatable": "^20.1.0",
+    "angular2-uuid": "^1.1.1",
+    "javascript-color-gradient": "^2.4.4",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "ngx-datatable": "^1.0.3",
@@ -62,19 +65,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "2593356837035260983"
+        "hash": "13324945697494948214"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "1678124520698298122"
+        "hash": "12587412615477710497"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "16684795610984248179"
+        "hash": "4366107037002770646"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "7353310102720796925"
+        "hash": "5529923714053458513"
       },
       {
         "file": ".vscode/extensions.json",
@@ -98,11 +101,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "17264033287180853543"
+        "hash": "14005321020514953217"
       },
       {
         "file": "package.json",
-        "hash": "13131694285048626977"
+        "hash": "11299069999826179350"
       },
       {
         "file": "src/app/+state/me.actions.ts",
@@ -122,7 +125,7 @@
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "2478887469567217113"
+        "hash": "13132553602592525653"
       },
       {
         "file": "src/app/app.component.html",
@@ -142,7 +145,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "14365052971801673992"
+        "hash": "14159281230429816672"
       },
       {
         "file": "src/app/books/book-upload-modal/book-upload-modal.html",
@@ -197,6 +200,50 @@
         "hash": "2241796555527294692"
       },
       {
+        "file": "src/app/components/donut-chart/donut-chart.component.ts",
+        "hash": "1953640315026894567"
+      },
+      {
+        "file": "src/app/components/donut-chart/donut-chart.module.ts",
+        "hash": "4584511682913145894"
+      },
+      {
+        "file": "src/app/components/histogram-chart/histogram-chart.html",
+        "hash": "13614240555458837215"
+      },
+      {
+        "file": "src/app/components/histogram-chart/histogram-chart.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/components/histogram-chart/histogram-chart.ts",
+        "hash": "8115883316422681077"
+      },
+      {
+        "file": "src/app/components/histogram-chart/histogram.module.ts",
+        "hash": "866436052405005570"
+      },
+      {
+        "file": "src/app/landing/landing-page.html",
+        "hash": "13183309652549646583"
+      },
+      {
+        "file": "src/app/landing/landing-page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/landing/landing-page.ts",
+        "hash": "12979523657619662667"
+      },
+      {
+        "file": "src/app/landing/landing-routing.module.ts",
+        "hash": "1735960576944075238"
+      },
+      {
+        "file": "src/app/landing/landing.module.ts",
+        "hash": "14195748706588835553"
+      },
+      {
         "file": "src/app/login-page/client/login.client.ts",
         "hash": "2904061228965313751"
       },
@@ -214,11 +261,11 @@
       },
       {
         "file": "src/app/login-page/login-page.html",
-        "hash": "1797201388287158008"
+        "hash": "14739468381689027177"
       },
       {
         "file": "src/app/login-page/login-page.scss",
-        "hash": "2228490321680029359"
+        "hash": "8735435114402795630"
       },
       {
         "file": "src/app/login-page/login-page.ts",
@@ -265,6 +312,66 @@
         "hash": "2590644593505456551"
       },
       {
+        "file": "src/app/reviews/+state/reviews.actions.ts",
+        "hash": "17900604604644895028"
+      },
+      {
+        "file": "src/app/reviews/+state/reviews.effects.ts",
+        "hash": "271680061248877788"
+      },
+      {
+        "file": "src/app/reviews/+state/reviews.reducers.ts",
+        "hash": "1788513609159336655"
+      },
+      {
+        "file": "src/app/reviews/+state/reviews.selectors.ts",
+        "hash": "16788271667998035207"
+      },
+      {
+        "file": "src/app/reviews/+state/stars-state/stars-reducers-state.ts",
+        "hash": "6339297193525575459"
+      },
+      {
+        "file": "src/app/reviews/+state/stars-state/stars.effects.ts",
+        "hash": "1703928534349456825"
+      },
+      {
+        "file": "src/app/reviews/+state/stars-state/stars.selectors.ts",
+        "hash": "16085867713726459070"
+      },
+      {
+        "file": "src/app/reviews/+state/stars-state/starts.actions.ts",
+        "hash": "10432062782162042106"
+      },
+      {
+        "file": "src/app/reviews/bo/reviews.bo.ts",
+        "hash": "1061336717088131699"
+      },
+      {
+        "file": "src/app/reviews/bo/total-stars-counts.bo.ts",
+        "hash": "3077405696203161692"
+      },
+      {
+        "file": "src/app/reviews/client/reviews.client.ts",
+        "hash": "14503170121425300107"
+      },
+      {
+        "file": "src/app/reviews/dto/reviews-for-creation.dto.ts",
+        "hash": "9296799594192775831"
+      },
+      {
+        "file": "src/app/reviews/model/reviews.model.ts",
+        "hash": "17166274899241625227"
+      },
+      {
+        "file": "src/app/reviews/model/star-counts.model.ts",
+        "hash": "13304922005566502148"
+      },
+      {
+        "file": "src/app/reviews/services/review.service.ts",
+        "hash": "16223738561953979744"
+      },
+      {
         "file": "src/app/service/token.service.ts",
         "hash": "6229100493520943910"
       },
@@ -302,11 +409,11 @@
       },
       {
         "file": "src/app/top-nav-bar/top-nav-bar.component.html",
-        "hash": "5433544742398938877"
+        "hash": "6695927546655436622"
       },
       {
         "file": "src/app/top-nav-bar/top-nav-bar.component.scss",
-        "hash": "9043195414912225322"
+        "hash": "6032585158820625842"
       },
       {
         "file": "src/app/top-nav-bar/top-nav-bar.component.ts",
@@ -314,7 +421,7 @@
       },
       {
         "file": "src/app/top-nav-bar/top-nav-bar.module.ts",
-        "hash": "3847859536742996637"
+        "hash": "13745493784540500212"
       },
       {
         "file": "src/app/users/+state/users.actions.ts",
@@ -330,7 +437,7 @@
       },
       {
         "file": "src/app/users/+state/users.selectors.ts",
-        "hash": "6710616326041317608"
+        "hash": "11285506246889826259"
       },
       {
         "file": "src/app/users/bo/user.bo.ts",
@@ -401,12 +508,12 @@
         "hash": "3244421341483603138"
       },
       {
-        "file": "src/assets/images/lu-library-logo.png",
-        "hash": "1089037655940756918"
+        "file": "src/assets/images/library-login-bc.png",
+        "hash": "2646214277219300920"
       },
       {
-        "file": "src/assets/images/lu-lore-logo.png",
-        "hash": "17431948202101800536"
+        "file": "src/assets/images/lu-library-logo.png",
+        "hash": "1089037655940756918"
       },
       {
         "file": "src/assets/images/lulore-logo.png",
