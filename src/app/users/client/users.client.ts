@@ -2,6 +2,7 @@ import { ClientBase } from '../../client.base';
 import { Observable } from 'rxjs';
 import { UserModel } from './model/user.model';
 import { Injectable } from '@angular/core';
+import { UserForCreationDto } from '../dto/user-for-creation.dto';
 
 @Injectable({providedIn: 'root'})
 export class UsersClient extends ClientBase {
@@ -15,8 +16,8 @@ export class UsersClient extends ClientBase {
     return this.httpClient.get<UserModel>(`${this.url}/${id}`);
   }
 
-  public createUser(user: UserModel): Observable<any> {
-    return this.httpClient.post<UserModel>(this.url, user);
+  public createUser(user: UserForCreationDto): Observable<any> {
+    return this.httpClient.post<UserForCreationDto>(this.url, user);
   }
 
   public updateUser(user: UserModel): Observable<UserModel> {

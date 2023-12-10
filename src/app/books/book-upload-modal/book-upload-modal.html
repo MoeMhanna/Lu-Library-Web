@@ -1,0 +1,43 @@
+<div class="header">
+  <div>Upload Book</div>
+</div>
+<form [formGroup]="bookForm">
+  <div class="form-group">
+    <label for="bookName">Book Name</label>
+    <input class="form-control" formControlName="bookName" id="bookName" placeholder="Enter book name" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="writer">Writer</label>
+    <input class="form-control" formControlName="writer" id="writer" placeholder="Enter writer's name" type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <input class="form-control"
+           formControlName="category"
+           id="category"
+           placeholder="Enter Major"
+           type="text">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" formControlName="description" id="description" rows="3"></textarea>
+  </div>
+
+
+  <div class="form-group">
+    <label for="file">Upload File</label>
+    <input (change)="selectFile($event)"
+           class="form-control-file"
+           id="file" type="file">
+  </div>
+</form>
+<div class="add-book">
+  <button (click)="onSubmit()"
+          class="action-button">
+    <fa-icon [icon]="['fas', 'add']"></fa-icon>
+    Upload Book
+  </button>
+</div>

@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  div {
+    font-size: 30px;
+    color: #1f2129;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 600px;
+  padding: 0 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  textarea {
+    width: 300px;
+  }
+
+  label {
+    display: block;
+    font-size: 22px;
+    color: #404040;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  textarea,
+  input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .form-control-file {
+    border: none;
+  }
+}
+
+.add-book {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .action-button {
+    width: 200px;
+    margin: 40px 0;
+  }
+}

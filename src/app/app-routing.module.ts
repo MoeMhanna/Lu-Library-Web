@@ -8,12 +8,20 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'landing',
+    loadChildren: () => import('./landing/landing.module').then(m => m.LandingModule),
+  },
+  {
     path: 'users',
     loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
   },
   {
     path: 'login',
     loadChildren: () => import('./login-page/login.module').then(m => m.LoginModule),
+  },
+  {
+    path: 'books',
+    loadChildren: () => import('./books/books.module').then(m => m.BooksModule),
   },
 ];
 

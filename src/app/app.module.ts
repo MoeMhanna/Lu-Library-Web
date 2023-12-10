@@ -17,6 +17,16 @@ import { UsersEffects } from './users/+state/users.effects';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPopoverBoxModule } from './popover-box/mat-popover-box.module';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { STARS_KEY, StarsReducers } from './reviews/+state/stars-state/stars-reducers-state';
+import { ReviewsEffects } from './reviews/+state/reviews.effects';
+import { REVIEWS_KEY, ReviewsReducer } from './reviews/+state/reviews.reducers';
+import { StarsEffects } from './reviews/+state/stars-state/stars.effects';
+import { MAJORS_KEY, MajorsReducers } from './majors/+state/majors.reducers';
+import { MajorsEffects } from './majors/+state/majors.effects';
+import { BOOKS_KEY, BooksReducer } from './books/+state/books.reducers';
+import { BooksEffects } from './books/+state/books.effects';
+import { BOOK_DETAILS_KEY, BookDetailsReducer } from './books/+state/books-details/books-details.reducers';
+import { BooksDetailsEffects } from './books/+state/books-details/books-details.effects';
 
 @NgModule({
   declarations: [
@@ -30,7 +40,12 @@ import { OverlayModule } from '@angular/cdk/overlay';
     MatPopoverBoxModule,
     OverlayModule,
     StoreModule.forRoot({
-      [USERS_KEY]: UsersReducer
+      [USERS_KEY]: UsersReducer,
+      [STARS_KEY]: StarsReducers,
+      [REVIEWS_KEY]: ReviewsReducer,
+      [MAJORS_KEY]: MajorsReducers,
+      [BOOKS_KEY]: BooksReducer,
+      [BOOK_DETAILS_KEY]: BookDetailsReducer
     }, {
       runtimeChecks: {
         strictActionTypeUniqueness: true,
@@ -39,7 +54,12 @@ import { OverlayModule } from '@angular/cdk/overlay';
       }
     }),
     EffectsModule.forRoot([
-      UsersEffects
+      UsersEffects,
+      ReviewsEffects,
+      StarsEffects,
+      MajorsEffects,
+      BooksEffects,
+      BooksDetailsEffects
     ]),
     TopNavBarModule,
     UsersModule

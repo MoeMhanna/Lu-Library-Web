@@ -18,7 +18,7 @@ export class TopNavBarComponent {
       isPageActive: false,
       role: PageEnum.page,
       handler: async () => {
-        this.router.navigate(['/users']);
+        await this.router.navigate(['/users']);
       }
     },
     {
@@ -40,6 +40,7 @@ export class TopNavBarComponent {
       isPageActive: false,
       role: PageEnum.modal,
       handler: async () => {
+        await this.router.navigate(['/books']);
       }
     },
     {

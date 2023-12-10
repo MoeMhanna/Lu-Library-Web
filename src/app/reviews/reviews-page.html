@@ -1,0 +1,45 @@
+<div class="reviews-container">
+  <div class="header">
+    Book Reviews:
+  </div>
+  <div (click)="presentAddCommentModal()"
+       class="add-comment">
+    <fa-icon [icon]="['fas', 'plus-circle']"></fa-icon>
+  </div>
+  <div class="comments-container">
+    <ng-container *ngrxLet="reviewsState$ | async as reviewsState">
+      <ng-container *ngIf="reviewsState.status === 'success'">
+        <ng-container *ngFor="let review of reviewsState[REVIEWS_KEY]">
+          <div class="review-item-wrapper">
+            <div class="review-item">
+              <div class="username">
+                <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                {{ review.username }}
+              </div>
+              <div class="message">
+                {{ review.review }}
+              </div>
+            </div>
+            <div class="stars-levels">
+              @if (review.starLevel >= 1) {
+                <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                @if (review.starLevel >= 2) {
+                  <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                  @if (review.starLevel >= 3) {
+                    <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                    @if (review.starLevel >= 4) {
+                      <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                      @if (review.starLevel === 5) {
+                        <fa-icon [icon]="['fas', 'star']"></fa-icon>
+                      }
+                    }
+                  }
+                }
+              }
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

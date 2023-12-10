@@ -1,0 +1,33 @@
+<div class="header">
+  <div>Add Comment</div>
+</div>
+<form [formGroup]="reviewForm">
+  <div class="form-group">
+    <textarea class="form-control"
+              formControlName="comment"
+              placeholder="Enter book name"
+              type="text"></textarea>
+  </div>
+  <div class="stars-levels">
+    @for (star of starsArray;track star.value;let idx = $index;) {
+      @if (star.isMarked) {
+        <div class="marked"
+             (click)="markStar(idx)">
+          <fa-icon [icon]="['fas', 'star']"></fa-icon>
+        </div>
+      } @else {
+        <div class="unmarked"
+             (click)="markStar(idx)">
+          <fa-icon [icon]="['fas', 'star']"></fa-icon>
+        </div>
+      }
+    }
+  </div>
+</form>
+<div class="add-book">
+  <button (click)="onSubmit()"
+          class="action-button">
+    <fa-icon [icon]="['fas', 'add']"></fa-icon>
+    Add Comment
+  </button>
+</div>

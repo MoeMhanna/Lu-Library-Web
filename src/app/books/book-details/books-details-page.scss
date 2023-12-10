@@ -1,0 +1,87 @@
+.book-details-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: relative;
+  height: 100%;
+
+  .book-image {
+    fa-icon {
+      font-size: 130px;
+      color: #87a4da;
+    }
+  }
+
+  .book-name {
+    margin-top: 20px;
+    font-size: 40px;
+    color: #404040;
+    width: 100%;
+    text-align: center;
+  }
+
+  .details {
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .writer {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #404040;
+      margin-bottom: 20px;
+      font-size: 20px;
+
+      .label {
+        color: #1f2129;
+        font-size: 25px;
+      }
+    }
+
+    .descriptions {
+      color: #404040;
+      margin-bottom: 40px;
+      box-sizing: border-box;
+
+      .label {
+        margin-bottom: 5px;
+        font-size: 22px;
+        color: #1f2129;
+      }
+
+      .desc {
+        padding: 10px;
+        border: 1px solid #d9d9d9;
+        border-radius: 5px;
+        font-size: 18px;
+        color: #5a6770;
+        height: 100px;
+        overflow-y: auto;
+      }
+    }
+  }
+
+  .reviews {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  .download-book {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    margin: 40px 0;
+    width: 80%;
+    box-sizing: border-box;
+
+    .action-button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.add-book {
+  width: 200px;
+  margin: 40px 0 10px 40px;
+}
+
+.books-table-container {
+  padding: 0 40px;
+
+  .books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #87a4da;
+    padding: 10px 130px 10px 10px;
+    color: #FFF;
+
+    .book-name, .book-major, .book-writer {
+      font-size: 25px;
+      width: 30%;
+    }
+  }
+
+  .books-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .book-name, .book-major, .book-writer {
+      font-size: 20px;
+      width: 30%;
+      padding: 10px;
+      color: #404040;
+
+      fa-icon {
+        color: #87a4da;
+        font-size: 25px;
+        margin-right: 10px;
+      }
+    }
+
+    .icon-ellipsis {
+      margin-right: 50px;
+    }
+  }
+
+  .books-data:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+}
