@@ -2,6 +2,7 @@ import { ClientBase } from '../../client.base';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MajorsModel } from '../models/majors.model';
+import { MajorForCreationDto } from '../dto/major-for-creation.dto';
 
 @Injectable({providedIn: 'root'})
 export class MajorsClient extends ClientBase {
@@ -15,9 +16,9 @@ export class MajorsClient extends ClientBase {
     return this.httpClient.get<MajorsModel>(this.url + '/' + id);
   }
 
-  // addMajor(major: MajorsModel) {
-  //   return this.httpClient.post(this.url, major);
-  // }
+  addMajor(major: MajorForCreationDto) {
+    return this.httpClient.post(this.url, major);
+  }
 
   public deleteMajor(id: number): Observable<any> {
     return this.httpClient.delete(this.url + '/' + id);

@@ -1,0 +1,17 @@
+<div class="header">
+  <div>Upload Major</div>
+</div>
+<div class="form-group">
+  <label>Major Name</label>
+  <input [formControl]="categoryControl"
+         class="form-control"
+         placeholder="Enter Major name"
+         type="text">
+</div>
+<div class="add-major">
+  <button (click)="createMajor()"
+          class="action-button">
+    <fa-icon [icon]="['fas', 'add']"></fa-icon>
+    Upload Book
+  </button>
+</div>

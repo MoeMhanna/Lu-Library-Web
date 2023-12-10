@@ -3,7 +3,7 @@ import { Observable, tap } from 'rxjs';
 import { ClientBase } from '../../client.base';
 import { BookForUploadDto } from '../dto/book-for-upload.dto';
 import { Injectable } from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeaders, HttpParams } from '@angular/common/http';
 import { BookModel } from './model/book.model';
 
 @Injectable({providedIn: 'root'})
@@ -16,8 +16,12 @@ export class BooksClient extends ClientBase {
     return this.httpClient.post<any>(this.url, book.bookFormData, {headers: httpHeaders});
   }
 
-  public getBooks(): Observable<Array<BookModel>> {
-    return this.httpClient.get<Array<BookModel>>(this.url);
+  public getBooks(categoryId?: string): Observable<Array<BookModel>> {
+    let queryParams = new HttpParams();
+    if (categoryId) {
+      queryParams = queryParams.append('categoryId', categoryId);
+    }
+    return this.httpClient.get<Array<BookModel>>(this.url, {params: queryParams});
   }
 
   public getBookById(id: string): Observable<BookModel> {

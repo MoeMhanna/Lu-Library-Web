@@ -22,11 +22,18 @@
             {{ book.category }}
           </div>
           <div (click)="presentBookDetails(book.id)"
-          class="icon-ellipsis">
+               class="icon-ellipsis">
             <fa-icon [icon]="['fas', 'ellipsis-h']"></fa-icon>
           </div>
         </div>
       </ng-container>
     </ng-container>
+    @if (bookState.books.length === 0) {
+      <div class="empty-template">
+        <fa-icon [icon]="['fas', 'face-smile-beam']"></fa-icon>
+        <div>No Books Found</div>
+        <div class="details"> you can upload a new book to this Major</div>
+      </div>
+    }
   </ng-container>
 </div>

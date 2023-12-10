@@ -11,8 +11,8 @@ export class BookService {
   constructor(private booksClient: BooksClient) {
   }
 
-  public getBooks(): Observable<Array<BookBo>> {
-    return this.booksClient.getBooks()
+  public getBooks(categoryId?: string): Observable<Array<BookBo>> {
+    return this.booksClient.getBooks(categoryId)
       .pipe(
         map((bookModels: Array<BookModel>) => {
           return _.map(bookModels, (bookModel: BookModel) => new BookBo(bookModel)

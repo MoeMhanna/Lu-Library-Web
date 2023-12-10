@@ -67,7 +67,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "6720763877569351168"
+        "hash": "9655746502192409829"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -92,10 +92,6 @@
       {
         "file": ".vscode/tasks.json",
         "hash": "5336636969995539451"
-      },
-      {
-        "file": "README.md",
-        "hash": "10062849247973692605"
       },
       {
         "file": "angular.json",
@@ -147,7 +143,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "17499129430238718377"
+        "hash": "5599319245656639936"
       },
       {
         "file": "src/app/books/+state/books-details/books-details.actions.ts",
@@ -155,7 +151,7 @@
       },
       {
         "file": "src/app/books/+state/books-details/books-details.effects.ts",
-        "hash": "788817441650759876"
+        "hash": "5513827888120393023"
       },
       {
         "file": "src/app/books/+state/books-details/books-details.reducers.ts",
@@ -187,27 +183,27 @@
       },
       {
         "file": "src/app/books/book-details/books-details-page.html",
-        "hash": "16013133225386482866"
+        "hash": "5019247837801408371"
       },
       {
         "file": "src/app/books/book-details/books-details-page.scss",
-        "hash": "15496964241800730964"
+        "hash": "1050578998418570272"
       },
       {
         "file": "src/app/books/book-details/books-details-page.ts",
-        "hash": "3832860275202336151"
+        "hash": "2484030560772563541"
       },
       {
         "file": "src/app/books/book-details/books-details.module.ts",
-        "hash": "7867368574125474950"
+        "hash": "8567586855564190270"
       },
       {
         "file": "src/app/books/book-upload-modal/book-upload-modal.html",
-        "hash": "10510099897553509787"
+        "hash": "14567009331653800582"
       },
       {
         "file": "src/app/books/book-upload-modal/book-upload-modal.scss",
-        "hash": "1096678967276086063"
+        "hash": "9216970365920448516"
       },
       {
         "file": "src/app/books/book-upload-modal/book-upload-modal.ts",
@@ -219,7 +215,7 @@
       },
       {
         "file": "src/app/books/books-page.html",
-        "hash": "480956428724468210"
+        "hash": "9492281755836577684"
       },
       {
         "file": "src/app/books/books-page.scss",
@@ -227,7 +223,7 @@
       },
       {
         "file": "src/app/books/books-page.ts",
-        "hash": "10871680007146870671"
+        "hash": "15993430436915856347"
       },
       {
         "file": "src/app/books/books-routing.module.ts",
@@ -235,11 +231,11 @@
       },
       {
         "file": "src/app/books/books.module.ts",
-        "hash": "8176814892045218365"
+        "hash": "4346096074661399272"
       },
       {
         "file": "src/app/books/clients/books.client.ts",
-        "hash": "5798927771175087713"
+        "hash": "12229874252809006612"
       },
       {
         "file": "src/app/books/clients/model/book.model.ts",
@@ -251,7 +247,7 @@
       },
       {
         "file": "src/app/books/service/book.service.ts",
-        "hash": "7230144228934895648"
+        "hash": "3183465615798040111"
       },
       {
         "file": "src/app/client.base.ts",
@@ -403,11 +399,11 @@
       },
       {
         "file": "src/app/reviews/+state/reviews.actions.ts",
-        "hash": "17900604604644895028"
+        "hash": "7495854584525797168"
       },
       {
         "file": "src/app/reviews/+state/reviews.effects.ts",
-        "hash": "271680061248877788"
+        "hash": "8288636623929204720"
       },
       {
         "file": "src/app/reviews/+state/reviews.reducers.ts",
@@ -434,6 +430,22 @@
         "hash": "14769099753225804812"
       },
       {
+        "file": "src/app/reviews/add-review/review-upload-modal.html",
+        "hash": "8366831365610540359"
+      },
+      {
+        "file": "src/app/reviews/add-review/review-upload-modal.scss",
+        "hash": "8059410397620884655"
+      },
+      {
+        "file": "src/app/reviews/add-review/review-upload-modal.ts",
+        "hash": "9891639598390921183"
+      },
+      {
+        "file": "src/app/reviews/add-review/review-upload.module.ts",
+        "hash": "3161372457496534114"
+      },
+      {
         "file": "src/app/reviews/bo/reviews.bo.ts",
         "hash": "1061336717088131699"
       },
@@ -447,7 +459,7 @@
       },
       {
         "file": "src/app/reviews/dto/reviews-for-creation.dto.ts",
-        "hash": "9296799594192775831"
+        "hash": "12694084636704062862"
       },
       {
         "file": "src/app/reviews/model/reviews.model.ts",
@@ -458,12 +470,28 @@
         "hash": "13304922005566502148"
       },
       {
+        "file": "src/app/reviews/reviews-page.html",
+        "hash": "10462096790507577393"
+      },
+      {
+        "file": "src/app/reviews/reviews-page.scss",
+        "hash": "16908853473121508922"
+      },
+      {
+        "file": "src/app/reviews/reviews-page.ts",
+        "hash": "14184899911837777426"
+      },
+      {
+        "file": "src/app/reviews/reviews.module.ts",
+        "hash": "13318522411828915616"
+      },
+      {
         "file": "src/app/reviews/services/review.service.ts",
         "hash": "16223738561953979744"
       },
       {
         "file": "src/app/service/token.service.ts",
-        "hash": "6229100493520943910"
+        "hash": "7268828769969403486"
       },
       {
         "file": "src/app/shared/components/action-button/action-button.component.html",
@@ -611,7 +639,7 @@
       },
       {
         "file": "src/assets/styles/action-buttons.scss",
-        "hash": "1412600177548883312"
+        "hash": "6438801839744480790"
       },
       {
         "file": "src/favicon.ico",

@@ -18,7 +18,7 @@ Before running this Angular project, ensure you have the following installed:
    ```
 2. Install the required npm packages:
    ```
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 ### Running the Application

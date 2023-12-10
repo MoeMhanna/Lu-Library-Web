@@ -45,11 +45,12 @@ export class TopNavBarComponent {
     },
     {
       faIcon: ['fas', 'chart-bar'],
-      title: 'Categories',
+      title: 'Majors',
       visible: true,
       isPageActive: false,
       role: PageEnum.modal,
       handler: async () => {
+        await this.router.navigate(['/majors']);
       }
     },
   ];
