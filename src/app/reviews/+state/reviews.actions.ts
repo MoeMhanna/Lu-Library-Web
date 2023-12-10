@@ -5,7 +5,7 @@ import { TotalStarsCountsBo } from '../bo/total-stars-counts.bo';
 export const ReviewsActions = createActionGroup({
   source: 'reviews',
   events: {
-    'load reviews': props<{ bookId: string, stringId: string }>(),
+    'load reviews': props<{ bookId: string}>(),
     'load reviews success': props<{ reviewsBoList: Array<ReviewsBo> }>(),
     'load reviews error': props<{ error: string }>(),
 

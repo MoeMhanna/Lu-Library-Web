@@ -24,6 +24,10 @@ export class TokenService {
     return this.token.role === UserRoleEnum.ADMIN;
   }
 
+  get loggedInUserId() {
+    return this.token.id;
+  }
+
   public setTokenLocalStorage(token: UserBo) {
     localStorage.setItem('token', JSON.stringify(token));
     this.store.dispatch(MeActions.loadMe({user: token}));

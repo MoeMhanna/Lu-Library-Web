@@ -14,7 +14,6 @@ export class BooksDetailsEffects {
         return this.bookService.getBookById(action.bookId)
           .pipe(
             map((bookBo: BookBo) => {
-              console.log(bookBo);
               return BooksDetailsActions.loadBooksDetailsSuccess({booksBo: bookBo});
             }),
             catchError((error) => of(BooksDetailsActions.loadBooksDetailsError({error})))

@@ -1,23 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaIconComponent } from '@fortawesome/angular-fontawesome';
-import { BooksDetailsPage } from './books-details-page';
+import { ReviewsPage } from './reviews-page';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { ActionButtonModule } from '../shared/components/action-button/action-button.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LetDirective } from '@ngrx/component';
-import { ReviewsModule } from '../../reviews/reviews.module';
+import { ReviewUploadModule } from './add-review/review-upload.module';
 
 @NgModule({
-  declarations: [BooksDetailsPage],
+  declarations: [ReviewsPage],
   imports: [
     CommonModule,
     FaIconComponent,
     NgxDatatableModule,
+    ActionButtonModule,
     MatDialogModule,
     LetDirective,
-    ReviewsModule
+    ReviewUploadModule
   ],
-  exports: [BooksDetailsPage]
+  exports: [ReviewsPage]
 })
-export class BooksDetailsModule {
+export class ReviewsModule {
 }

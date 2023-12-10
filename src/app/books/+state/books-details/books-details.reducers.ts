@@ -25,7 +25,6 @@ export const BookDetailsReducer = createReducer<BooksDetailsState, Action>(Books
     }
   }),
   on(BooksDetailsActions.loadBooksDetailsSuccess, (state: BooksDetailsState, {booksBo}) => {
-    console.log(booksBo);
     return {
       ...state,
       [BOOK_DETAILS_KEY]: booksBo,

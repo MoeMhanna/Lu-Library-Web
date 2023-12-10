@@ -29,7 +29,7 @@ export class ReviewsEffects {
         return this.reviewService.createReview(action.bookId, action.userId, action.reviewsForCreationFormValue)
           .pipe(
             switchMap(() => [
-              ReviewsActions.loadReviews({bookId: action.bookId, stringId: action.bookId}),
+              ReviewsActions.loadReviews({bookId: action.bookId}),
               ReviewsActions.createReviewSuccess()
             ]),
             catchError((error) => {

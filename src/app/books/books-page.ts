@@ -32,9 +32,10 @@ export class BooksPage implements OnInit, OnDestroy {
   }
 
   presentBookDetails(id: string) {
+    console.log(id);
     this.matDialog.open(BooksDetailsPage, {
-      width: '800px',
-      height: '800px',
+      width: '100%',
+      height: '100%',
       data: id
     });
   }

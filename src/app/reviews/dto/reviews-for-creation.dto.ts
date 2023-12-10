@@ -4,7 +4,7 @@ export class ReviewsForCreationDto {
   userId: string;
 
   constructor(reviewFormValue: any, userId: string) {
-    this.review = reviewFormValue.review;
+    this.review = reviewFormValue.comment;
     this.starsLevel = reviewFormValue.starsLevel;
     this.userId = userId;
   }

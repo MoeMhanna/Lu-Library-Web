@@ -1,5 +1,5 @@
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { ChangeDetectorRef, Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
 import { selectBookDetailsLoaded } from '../+state/books-details/books-details.selectors';
 import { BooksDetailsActions } from '../+state/books-details/books-details.actions';
@@ -18,13 +18,14 @@ export class BooksDetailsPage implements OnInit, OnDestroy {
   public bookDetails: BookBo;
   private subscription = new Subscription();
 
-  constructor(private matDialogRef: MatDialogRef<BooksDetailsPage>,
-              public bookService: BookService,
+  constructor(public bookService: BookService,
+              private changeDetectorRef: ChangeDetectorRef,
               @Inject(MAT_DIALOG_DATA) public data: string,
               public store: Store) {
   }
 
   ngOnDestroy(): void {
+    this.data = null;
     this.subscription.unsubscribe();
   }
 
@@ -40,9 +41,9 @@ export class BooksDetailsPage implements OnInit, OnDestroy {
   private bookDetailsSubscription() {
     const bookDetailsSubscription$ = this.bookDetailsState$
       .subscribe((bookDetailsState) => {
-        console.log(bookDetailsState);
         if (bookDetailsState.status === HttpStatusEnum.success) {
           this.bookDetails = bookDetailsState[BOOK_DETAILS_KEY];
+          this.changeDetectorRef.detectChanges();
         }
       });
     this.subscription.add(bookDetailsSubscription$);

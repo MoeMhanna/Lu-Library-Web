@@ -2,12 +2,11 @@
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 40px;
   position: relative;
-  height: 800px;
+  height: 100%;
 
   .book-image {
     fa-icon {
@@ -27,7 +26,6 @@
   .details {
     margin-top: 20px;
     width: 100%;
-    margin-bottom: 30px;
     box-sizing: border-box;
 
     .writer {
@@ -61,10 +59,16 @@
         border-radius: 5px;
         font-size: 18px;
         color: #5a6770;
-        height: 300px;
+        height: 100px;
         overflow-y: auto;
       }
     }
+  }
+
+  .reviews {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
   }
 
   .download-book {

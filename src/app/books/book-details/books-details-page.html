@@ -23,7 +23,11 @@
       </div>
     </div>
   </div>
-  <div class="reviews"></div>
+  @if (data) {
+    <div class="reviews">
+      <books-reviews [bookId]="data"></books-reviews>
+    </div>
+  }
   <div class="download-book">
     <button (click)="downloadBook()"
             class="action-button">
