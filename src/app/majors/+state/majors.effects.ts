@@ -23,23 +23,23 @@ export class MajorsEffects {
   );
 
 
-  // public $createMajors = createEffect(() => this.actions$
-  //   .pipe(
-  //     ofType(MajorsActions.createMajors),
-  //     switchMap((action) => {
-  //       return this.majorServices.createMajors(action.majorName)
-  //         .pipe(
-  //           switchMap(() => [
-  //             MajorsActions.loadMajors(),
-  //             MajorsActions.createMajorsSuccess()
-  //           ]),
-  //           catchError((error) => {
-  //             return of(MajorsActions.createMajorsError({error}));
-  //           })
-  //         )
-  //     })
-  //   )
-  // );
+  public $createMajors = createEffect(() => this.actions$
+    .pipe(
+      ofType(MajorsActions.createMajors),
+      switchMap((action) => {
+        return this.majorServices.addMajor(action.majorName)
+          .pipe(
+            switchMap(() => [
+              MajorsActions.loadMajors(),
+              MajorsActions.createMajorsSuccess()
+            ]),
+            catchError((error) => {
+              return of(MajorsActions.createMajorsError({error}));
+            })
+          )
+      })
+    )
+  );
 
   public $deleteMajors = createEffect(() => this.actions$
     .pipe(

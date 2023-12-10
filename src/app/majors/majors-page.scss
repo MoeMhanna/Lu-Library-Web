@@ -1,0 +1,50 @@
+.add-major {
+  width: 200px;
+  margin: 40px 0 10px 40px;
+}
+
+.Majors-table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  gap: 20px;
+
+  .major-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    border: 2px #efefef solid;
+    background-color: #f0f0f0f0;
+    border-radius: 6px;
+    cursor: pointer;
+
+    .major-name {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #404040;
+    }
+
+    fa-icon {
+      font-size: 60px;
+      color: #87a4da;
+    }
+  }
+
+  .major-item:hover {
+    transition-duration: 0.4s;
+    background-color: #98846c;
+
+    .major-name {
+      transition-duration: 0.4s;
+      color: #fff;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { map, Observable } from 'rxjs';
 import { MajorsBo } from '../bo/majors.bo';
 import * as _ from 'lodash';
 import { DonutChartIDataInterface } from '../../components/donut-chart/donut-chart.component';
+import { MajorForCreationDto } from '../dto/major-for-creation.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -33,9 +34,10 @@ export class MajorServices {
       );
   }
 
-  // addMajor(major: MajorsModel) {
-  //   return this.majorsClient.addMajor(major);
-  // }
+  public addMajor(categoryName: string) {
+    const majorForCreationDto = new MajorForCreationDto(categoryName);
+    return this.majorsClient.addMajor(majorForCreationDto);
+  }
 
   public deleteMajor(id: number) {
     return this.majorsClient.deleteMajor(id);

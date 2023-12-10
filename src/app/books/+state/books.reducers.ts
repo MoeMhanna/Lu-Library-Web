@@ -57,4 +57,25 @@ export const BooksReducer = createReducer<BooksState, Action>(BooksInitialState,
       status: HttpStatusEnum.error
     }
   }),
+
+  on(BooksActions.loadCategoryBooks, (state: BooksState) => {
+    return {
+      ...state,
+      status: HttpStatusEnum.loading
+    }
+  }),
+  on(BooksActions.loadCategoryBooksSuccess, (state: BooksState, {booksBoList}) => {
+    return {
+      ...state,
+      [BOOKS_KEY]: booksBoList,
+      status: HttpStatusEnum.success
+    }
+  }),
+  on(BooksActions.loadCategoryBooksError, (state: BooksState, {error}) => {
+    return {
+      ...state,
+      error: error,
+      status: HttpStatusEnum.error
+    }
+  })
 )

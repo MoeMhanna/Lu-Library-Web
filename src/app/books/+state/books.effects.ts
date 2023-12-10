@@ -23,6 +23,21 @@ export class BooksEffects {
     )
   );
 
+  public $loadCategoryBooks = createEffect(() => this.actions$
+    .pipe(
+      ofType(BooksActions.loadCategoryBooks),
+      switchMap((action) => {
+        return this.bookService.getBooks(action.categoryId)
+          .pipe(
+            map((BooksBoList: Array<BookBo>) => {
+              return BooksActions.loadCategoryBooksSuccess({booksBoList: BooksBoList});
+            }),
+            catchError((error) => of(BooksActions.loadCategoryBooksError({error})))
+          )
+      })
+    )
+  );
+
   public $createBook = createEffect(() => this.actions$
     .pipe(
       ofType(BooksActions.createBooks),
@@ -31,6 +46,7 @@ export class BooksEffects {
           .pipe(
             switchMap(() => [
               BooksActions.loadBooks(),
+              BooksActions.loadCategoryBooks({categoryId: action.bookForUploadFormValue.category}),
               BooksActions.createBooksSuccess()
             ]),
             catchError((error) => {

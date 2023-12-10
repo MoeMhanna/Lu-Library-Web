@@ -8,6 +8,10 @@ export const BooksActions = createActionGroup({
     'load books success': props<{ booksBoList: Array<BookBo> }>(),
     'load books error': props<{ error: string }>(),
 
+    'load category books': props<{ categoryId: string }>(),
+    'load category books success': props<{ booksBoList: Array<BookBo> }>(),
+    'load category books error': props<{ error: string }>(),
+
     'create books': props<{ bookForUploadFormValue: any, bookFile: File }>(),
     'create books success': emptyProps(),
     'create books error': props<{ error: string }>(),
